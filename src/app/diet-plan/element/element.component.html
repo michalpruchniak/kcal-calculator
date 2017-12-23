@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title"> {{ element.name }}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">{{ element.weight }}g contain</h6>
+    <table class = "table">
+        <thead>
+          <tr>
+            <th>Kcal</th>
+            <th>Protein</th>
+            <th>Carbo</th>
+            <th>Fat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th> {{ nutrition(element.weight, element.kcal) }}</th>
+            <th> {{ nutrition(element.weight, element.protein) }}</th>
+            <th> {{ nutrition(element.weight, element.carbo) }}</th>
+            <th> {{ nutrition(element.weight, element.fat) }}</th>
+          </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-danger" (click) = "onDelElement(ind)">Delete</button>
+  </div>
+</div>

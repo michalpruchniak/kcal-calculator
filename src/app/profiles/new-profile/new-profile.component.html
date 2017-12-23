@@ -1,0 +1,86 @@
+<div class="container">
+
+  <h2>Add new profile</h2>
+  <form #elementForm="ngForm">
+    <div [hidden]="elementForm.submitted">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" class="form-control"
+               required minlength="4"
+               [(ngModel)]="newElement.name" #name="ngModel" >
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="name.errors.required">
+            This field is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name must be at least 3 characters long.
+          </div>
+
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight</label>
+            <input id="weight" name="weight" class="form-control" type="number"
+                    required [(ngModel)]="newElement.weight" #weight="ngModel" >
+
+            <div *ngIf="weight.errors && weight.touched" class="alert alert-danger">
+              <div *ngIf="weight.errors.required">This field is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="active">Active</label>
+            <select id="active" name="active" class="form-control"
+                    required [(ngModel)]="newElement.active" #active="ngModel" >
+            <option value="1.1">No active, sedentary work</option>
+            <option value="1.2">unregular workout, small active</option>
+            <option value="1.3">workout 1-3 times per week, small active</option>
+            <option value="1.4">workout 1-3 times per week, high daily active</option>
+            <option value="1.5">workout 4-7 times per week</option>
+            </select>
+
+            <div *ngIf="active.errors && active.touched" class="alert alert-danger">
+              <div *ngIf="active.errors.required">This field is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="goal">Goal</label>
+            <select id="goal" name="goal" class="form-control"
+                    required [(ngModel)]="newElement.goal" #goal="ngModel" >
+            <option value="1">Lose weight</option>
+            <option value="2">Build mass</option>
+            </select>
+
+            <div *ngIf="goal.errors && goal.touched" class="alert alert-danger">
+              <div *ngIf="goal.errors.required">This field is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input id="amount" name="amount" class="form-control" type="number"
+                    required [(ngModel)]="newElement.amount" #amount="ngModel" >
+
+            <div *ngIf="amount.errors && amount.touched" class="alert alert-danger">
+              <div *ngIf="amount.errors.required">This field is required.</div>
+            </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-secondary"
+              >Previous</button>
+      <button type="submit" class="btn btn-primary"
+              [disabled]="elementForm.invalid"
+              (click) = "onAddNewProfile()">Add new profile</button>
+      <button type="button" class="btn btn-default"
+              (click)="elementForm.resetForm({})">Reset</button>
+    </div>
+
+    <div class="submitted-message" *ngIf="elementForm.submitted">
+      <p>You've added, {{ elementForm.value.name }}!</p>
+      <button class="btn btn-secondary" (click)="elementForm.resetForm({})">Add new product</button>
+    </div>
+  </form>
+
+</div>

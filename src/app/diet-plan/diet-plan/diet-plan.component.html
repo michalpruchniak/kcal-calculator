@@ -1,0 +1,7 @@
+<div class="dietPlan">
+<app-element
+    *ngFor = "let element of dietList; index as ind"
+    [element]="element"
+    [ind] = "ind"
+>{{ ind }}</app-element>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title"> {{ product.name }}</h4>
+    <div>
+    <table class = "table">
+        <thead>
+          <tr>
+            <th>Kcal</th>
+            <th>Protein</th>
+            <th>Carbo</th>
+            <th>Fat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{ product.kcal }}</th>
+            <th>{{ product.protein }}</th>
+            <th>{{ product.carbo }}</th>
+            <th>{{ product.fat }}</th>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Weight" #productWeight>
+      </div>
+      <div class="col-sm-2">
+        <button class="btn btn-primary" (click) = "onAddNewElement(product, productWeight.value); productWeight.value = ''">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

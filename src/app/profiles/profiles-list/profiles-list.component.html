@@ -1,0 +1,7 @@
+<button class="btn btn-primary"
+        routerLink="/new-profile">
+Add new profile
+</button>
+<app-profil *ngFor="let profile of profiles"
+            [profile] = "profile"
+            (click) = "onCheckProfile(profile)"></app-profil>

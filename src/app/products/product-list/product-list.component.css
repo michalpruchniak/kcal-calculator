@@ -1,0 +1,10 @@
+.productsList {
+  height: 40vh;
+  overflow-X: auto;
+}
+.header{
+  padding-left: 20px;
+}
+.btn-primary{
+  margin-top: 15px;
+}
