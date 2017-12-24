@@ -20,12 +20,14 @@ import { ProfilComponent } from './profiles/profil/profil.component';
 import { ProfilesService} from './profiles/profiles.service';
 import { ShortInformationComponent } from './stats/short-information/short-information.component';
 import 'hammerjs';
+import { StatsComponent } from './stats/stats/stats.component';
 const routes:Routes = [
   { path: '', component: DietPlanComponent},
   { path: 'diet-plan', component: DietPlanComponent},
   { path: 'new-product', component: NewProductComponent},
   { path: 'profiles-list', component: ProfilesListComponent},
-  { path: 'new-profile', component: NewProfileComponent}
+  { path: 'new-profile', component: NewProfileComponent},
+  { path: 'stats', component: StatsComponent}
 
 ];
 @NgModule({
@@ -40,7 +42,8 @@ const routes:Routes = [
     NewProfileComponent,
     ProfilesListComponent,
     ProfilComponent,
-    ShortInformationComponent
+    ShortInformationComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

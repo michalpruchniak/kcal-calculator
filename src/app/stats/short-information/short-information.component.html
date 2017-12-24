@@ -1,4 +1,13 @@
-
-Total kcal
-  <kendo-sparkline [data]="bulletData" type="bullet"  [valueAxis]="bulletValueAxis">
+<div *ngIf="profile">dasdasdsad</div>
+Kcal
+  <kendo-sparkline [data]="bulletKcal" type="bullet"  [valueAxis]="bulletValueKcal">
   </kendo-sparkline>
+  Protein
+    <kendo-sparkline [data]="bulletProtein" type="bullet"  [valueAxis]="bulletValueProtein">
+    </kendo-sparkline>
+  Carbo
+    <kendo-sparkline [data]="bulletCarbo" type="bullet"  [valueAxis]="bulletValueCarbo">
+    </kendo-sparkline>
+  Fat
+    <kendo-sparkline [data]="bulletFat" type="bullet"  [valueAxis]="bulletValueFat">
+    </kendo-sparkline>

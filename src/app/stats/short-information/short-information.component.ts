@@ -8,8 +8,15 @@ import { DietService } from '../../diet-plan/diet.service';
   styleUrls: ['./short-information.component.css']
 })
 export class ShortInformationComponent implements DoCheck {
-  public bulletData: any[];
-  public bulletValueAxis: any;
+  public bulletKcal: any[];
+  public bulletValueKcal: any;
+  public bulletProtein: any[];
+  public bulletValueProtein: any;
+  public bulletCarbo: any[];
+  public bulletValueCarbo: any;
+  public bulletFat: any[];
+  public bulletValueFat: any;
+  
   constructor(
     private profilesService: ProfilesService,
     private dietService: DietService
@@ -18,14 +25,29 @@ export class ShortInformationComponent implements DoCheck {
   ngDoCheck() {
     let profile = this.profilesService.getProfile();
     let currentValues = this.dietService.totalKcal();
-    console.log(profile);
     if(profile !== undefined) {
-  this.bulletData = [this.dietService.totalKcal().kcal, profile.kcal];
-  this.bulletValueAxis = {
+      this.bulletKcal = [this.dietService.totalKcal().kcal, profile.kcal];
+      this.bulletValueKcal = {
           min: 0,
           max: profile.kcal * 1.1
       };
+      this.bulletProtein = [this.dietService.totalKcal().protein, profile.protein];
+      this.bulletValueProtein = {
+          min: 0,
+          max: profile.protein * 1.1
+      };
+      this.bulletCarbo = [this.dietService.totalKcal().carbo, profile.carbo];
+      this.bulletValueCarbo = {
+          min: 0,
+          max: profile.carbo * 1.1
+      };
+      this.bulletFat = [this.dietService.totalKcal().fat, profile.fat];
+      this.bulletValueFat = {
+          min: 0,
+          max: profile.fat * 1.1
+      };
+      };
+
     }
 
-}
 }

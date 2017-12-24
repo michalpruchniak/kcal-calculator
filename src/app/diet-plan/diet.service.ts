@@ -16,11 +16,15 @@ export class DietService{
   totalKcal(){
     var hello = {
       kcal: 0,
-      protein: 0
+      protein: 0,
+      carbo: 0,
+      fat: 0
     }
     for(var product of PRODUCTS){
       hello.kcal += product.kcal * product.weight/100;
       hello.protein += product.protein * product.weight/100;
+      hello.carbo += product.carbo * product.weight/100;
+      hello.fat += product.fat * product.weight/100;
     }
     return hello;
   }

@@ -29,7 +29,7 @@
                   required [(ngModel)]="newElement.kcal" #kcal="ngModel" >
 
           <div *ngIf="kcal.errors && kcal.touched" class="alert alert-danger">
-            <div *ngIf="kcal.errors.required">Power is required.</div>
+            <div *ngIf="kcal.errors.required">This field is required.</div>
           </div>
       </div>
       <div class="form-group">
@@ -38,7 +38,7 @@
                 required [(ngModel)]="newElement.protein" #protein="ngModel" >
 
         <div *ngIf="protein.errors && protein.touched" class="alert alert-danger">
-          <div *ngIf="protein.errors.required">Power is required.</div>
+          <div *ngIf="protein.errors.required">This field is required.</div>
         </div>
       </div>
       <div class="form-group">
@@ -47,7 +47,7 @@
                 required [(ngModel)]="newElement.carbo" #carbo="ngModel" >
 
         <div *ngIf="carbo.errors && carbo.touched" class="alert alert-danger">
-          <div *ngIf="carbo.errors.required">Power is required.</div>
+          <div *ngIf="carbo.errors.required">This field is required.</div>
         </div>
       </div>
       <div class="form-group">
@@ -56,7 +56,7 @@
                 required [(ngModel)]="newElement.fat" #fat="ngModel" >
 
         <div *ngIf="fat.errors && fat.touched" class="alert alert-danger">
-          <div *ngIf="fat.errors.required">Power is required.</div>
+          <div *ngIf="fat.errors.required">This field is required.</div>
         </div>
       </div>
 
