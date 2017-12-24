@@ -1,7 +1,7 @@
 <div *ngIf="activeProfile; else elseContent">
   <h2>Statistics</h2>
   <kendo-chart>
-    <kendo-chart-title text="Needs"></kendo-chart-title>
+    <kendo-chart-title text="Nutrients"></kendo-chart-title>
     <kendo-chart-series>
       <kendo-chart-series-item
           type="donut" [data]="data"
@@ -15,7 +15,7 @@
     <kendo-chart-legend [visible]="true"></kendo-chart-legend>
   </kendo-chart>
   <kendo-chart>
-    <kendo-chart-title text="Units sold"></kendo-chart-title>
+    <kendo-chart-title text="Currently nutrients vs needs"></kendo-chart-title>
     <kendo-chart-category-axis>
         <kendo-chart-category-axis-item [categories]="['kcal', 'protein', 'carbo', 'fat']">
         </kendo-chart-category-axis-item>

@@ -1,17 +1,16 @@
 .header{
-  height: 10vh;
+  height: 15vh;
+  z-index: 10;
 }
 .main-content{
   height: 65vh;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 1;
 }
 .product-list{
   height: 55vh;
   overflow-y: auto;
   overflow-x: hidden;
-}
-.hello{
-  height: 100px;
-  background-color: green;
+  z-index: 1;
 }

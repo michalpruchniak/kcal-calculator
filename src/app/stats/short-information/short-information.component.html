@@ -1,13 +1,22 @@
-<div *ngIf="profile">dasdasdsad</div>
-Kcal
-  <kendo-sparkline [data]="bulletKcal" type="bullet"  [valueAxis]="bulletValueKcal">
-  </kendo-sparkline>
+<div class="row short-stats">
+<div class="col-sm-6 col-md-3">
+  Kcal
+    <kendo-sparkline [data]="bulletKcal" type="bullet"  [valueAxis]="bulletValueKcal">
+    </kendo-sparkline>
+</div>
+<div class="col-sm-6 col-md-3">
   Protein
     <kendo-sparkline [data]="bulletProtein" type="bullet"  [valueAxis]="bulletValueProtein">
     </kendo-sparkline>
+</div>
+<div class="col-sm-6 col-md-3">
   Carbo
     <kendo-sparkline [data]="bulletCarbo" type="bullet"  [valueAxis]="bulletValueCarbo">
     </kendo-sparkline>
+</div>
+<div class="col-sm-6 col-md-3">
   Fat
     <kendo-sparkline [data]="bulletFat" type="bullet"  [valueAxis]="bulletValueFat">
     </kendo-sparkline>
+</div>
+</div>
