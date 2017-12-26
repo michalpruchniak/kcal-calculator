@@ -25,7 +25,7 @@
 
       <div class="form-group">
           <label for="kcal">Kcal</label>
-          <input id="kcal" name="kcal" class="form-control"
+          <input id="kcal" name="kcal" class="form-control" type="number"
                   required [(ngModel)]="newElement.kcal" #kcal="ngModel" >
 
           <div *ngIf="kcal.errors && kcal.touched" class="alert alert-danger">
@@ -34,7 +34,7 @@
       </div>
       <div class="form-group">
         <label for="protein">Protein</label>
-        <input id="protein" name="protein" class="form-control"
+        <input id="protein" name="protein" class="form-control" type="number"
                 required [(ngModel)]="newElement.protein" #protein="ngModel" >
 
         <div *ngIf="protein.errors && protein.touched" class="alert alert-danger">
@@ -43,7 +43,7 @@
       </div>
       <div class="form-group">
         <label for="carbo">Carbo</label>
-        <input id="carbo" name="carbo" class="form-control"
+        <input id="carbo" name="carbo" class="form-control" type="number"
                 required [(ngModel)]="newElement.carbo" #carbo="ngModel" >
 
         <div *ngIf="carbo.errors && carbo.touched" class="alert alert-danger">
@@ -52,7 +52,7 @@
       </div>
       <div class="form-group">
         <label for="fat">Fat</label>
-        <input id="fat" name="fat" class="form-control"
+        <input id="fat" name="fat" class="form-control" type="number"
                 required [(ngModel)]="newElement.fat" #fat="ngModel" >
 
         <div *ngIf="fat.errors && fat.touched" class="alert alert-danger">

@@ -8,6 +8,10 @@ export class ProductsService {
     return Promise.resolve(PRODUCTS);
   }
   addNewProduct(element){
+    let index = PRODUCTS.length-1;
+    let id = PRODUCTS[index].id;
+    id++;
+    element.id = id;
     PRODUCTS.push(element);
   }
 }
