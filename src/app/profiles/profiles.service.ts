@@ -13,14 +13,7 @@ export class ProfilesService {
   checkActiveProfile(profile){
       this.activeProfile = profile;
   }
-  lastestElement(){
-    if(PROFILES.length < 1){
-      return 1;
-    } else {
-      let index = PROFILES[PROFILES.length-1].id;
-    }
-    return index;
-  }
+  
   addNewProfile(element){
     let index = PROFILES.length-1;
     let id = PROFILES[index].id;
