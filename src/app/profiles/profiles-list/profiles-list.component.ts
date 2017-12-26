@@ -15,7 +15,6 @@ export class ProfilesListComponent implements OnInit {
   ) { }
   onCheckProfile(profile){
     this.profilesService.checkActiveProfile(profile);
-    console.log(this.profilesService.activeProfile);
   }
   ngOnInit() {
     this.profilesService.getProfiles().then(

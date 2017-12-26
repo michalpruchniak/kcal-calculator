@@ -1,16 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, DoCheck, Input } from '@angular/core';
+import { ProfilesService } from '../profiles.service';
 
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.css']
 })
-export class ProfilComponent implements OnInit {
+export class ProfilComponent implements DoCheck {
 
   @Input() profile;
-  constructor() { }
+  activeProfile;
+  constructor(
+    private profilesService: ProfilesService
+  ) { }
 
-  ngOnInit() {
+  ngDoCheck() {
+    this.activeProfile = this.profilesService.activeProfile;
   }
 
 }
